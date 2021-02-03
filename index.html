@@ -8,13 +8,33 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="profile-container"></div>
-    <script id="profile" type="text-handlebars-template">
+    <div class="profile-container">
+    </div>
+
+    <ul id="org-url"></ul>
+
+
+    <script id="profile" type="text/x-handlebars-template">
       <div>
-        <p>{{data.log}}</p>
+        <img src={{this.avatar_url}} alt=""/>
+        <button>Edit Profile</button>
+        <h2>{{this.login}}</h2>
+        <h3>Organizations</h3>
+
       </div>
     </script>
+
+    <script id="orgs" type="text/x-handlebars-template">
+          {{#each orgs}}
+          <li>
+            <img src={{this.avatar_url}} alt="Organization"/>
+          </li>
+          {{/each}}
+    </script>
+
+
+    <script src="/js/secrets.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="main.js" charset="utf-8"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
   </body>
 </html>
