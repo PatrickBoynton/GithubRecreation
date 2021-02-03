@@ -34,4 +34,21 @@ fetch(`${BASE_URL}/orgs`, {
 })
 .then(response => response.json())
 .then(data => generateOrgUrl(data));
+
+const generateRepoList = (data) => {
+  const source = document.querySelector("#repo").innerHTML;
+  const template = Handlebars.compile(source);
+  const context = { repos: data }
+  const html = template(context);
+  console.log(data);
+  document.querySelector(".repos").innerHTML = html;
+}
+
+fetch(`${BASE_URL}/repos`, {
+  headers: {
+    Authorization: GITHUB_TOKEN
+  }
+})
+.then(response => response.json())
+.then(data => {generateRepoList(data)});
 }());
