@@ -17,18 +17,19 @@
     <script id="profile" type="text/x-handlebars-template">
       <div>
         <img src={{this.avatar_url}} alt=""/>
-        <button>Edit Profile</button>
         <h2>{{this.login}}</h2>
+        <button>Edit Profile</button>
+
         <h3>Organizations</h3>
 
       </div>
     </script>
 
     <script id="orgs" type="text/x-handlebars-template">
-          {{#each orgs}}
-          <li>
-            <img src={{this.avatar_url}} alt="Organization"/>
-          </li>
+          {{#each organization}}
+            <li>
+              <img src={{this.avatar_url}} alt="Organization"/>
+            </li>
           {{/each}}
     </script>
 
@@ -38,8 +39,11 @@
         <h2>
           <li>
             <a href={{this.archive.url}}>{{this.name}}</a>
-            <p>{{this.description}}</p>
-            <p>{{this.language}}</p>
+            <div class="repo-lang-d">
+              <p>{{this.language}}</p>
+              <p>{{this.description}}</p>
+            </div>
+
           </li>
         </h2>
         {{/each}}

@@ -22,7 +22,7 @@
 const generateOrgUrl = (data) => {
   const source = document.querySelector("#orgs").innerHTML;
   const template =  Handlebars.compile(source);
-  const context = { orgs: data };
+  const context = { organization: data };
   const html = template(context);
   document.querySelector("#org-url").innerHTML = html;
 }
