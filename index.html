@@ -9,10 +9,10 @@
   </head>
   <body>
     <aside class="profile-container">
+          <ul id="org-url"></ul>
     </aside>
 
-    <ul id="org-url"></ul>
-
+    <section class="repos"></section>
 
     <script id="profile" type="text/x-handlebars-template">
       <div>
@@ -32,6 +32,19 @@
           {{/each}}
     </script>
 
+    <script id="repo" type="text/x-handlerbars-template">
+      <ul class="repo-list">
+        {{#each repos}}
+        <h2>
+          <li>
+            <a href={{this.archive.url}}>{{this.name}}</a>
+            <p>{{this.description}}</p>
+            <p>{{this.language}}</p>
+          </li>
+        </h2>
+        {{/each}}
+      </ul>
+    </script>
 
     <script src="/js/secrets.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
