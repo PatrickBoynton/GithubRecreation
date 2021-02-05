@@ -9,20 +9,21 @@
   </head>
   <body>
     <aside class="profile-container">
+          <div class="profile-info"></div>
           <ul id="org-url"></ul>
     </aside>
 
     <section class="repos"></section>
 
     <script id="profile" type="text/x-handlebars-template">
-      <div>
+
         <img src={{this.avatar_url}} alt=""/>
         <h2>{{this.login}}</h2>
         <button>Edit Profile</button>
 
         <h3>Organizations</h3>
 
-      </div>
+
     </script>
 
     <script id="orgs" type="text/x-handlebars-template">
@@ -50,8 +51,8 @@
       </ul>
     </script>
 
-    <script src="/js/secrets.js" charset="utf-8"></script>
+    <!-- <script src="/js/secrets.js" charset="utf-8"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="/js/main.js" charset="utf-8"></script>
+    <script src="./js/main.js" charset="utf-8"></script>
   </body>
 </html>
