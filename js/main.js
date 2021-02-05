@@ -8,13 +8,13 @@
     const context = data;
     const html = template(context);
 
-    document.querySelector(".profile-container").innerHTML = html;
+    document.querySelector(".profile-info").innerHTML = html;
   }
 
   fetch(`${BASE_URL}`, {
-    headers: {
-      Authorization: GITHUB_TOKEN
-    }
+    // headers: {
+    //   Authorization: GITHUB_TOKEN
+    // }
   })
   .then(response => response.json())
   .then(data => generateAside(data));
@@ -28,9 +28,9 @@ const generateOrgUrl = (data) => {
 }
 
 fetch(`${BASE_URL}/orgs`, {
-  headers: {
-    Authorization: GITHUB_TOKEN
-  }
+  // headers: {
+  //   Authorization: GITHUB_TOKEN
+  // }
 })
 .then(response => response.json())
 .then(data => generateOrgUrl(data));
@@ -45,9 +45,9 @@ const generateRepoList = (data) => {
 }
 
 fetch(`${BASE_URL}/repos`, {
-  headers: {
-    Authorization: GITHUB_TOKEN
-  }
+  // headers: {
+  //   Authorization: GITHUB_TOKEN
+  // }
 })
 .then(response => response.json())
 .then(data => {generateRepoList(data)});
