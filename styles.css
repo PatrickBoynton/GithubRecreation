@@ -1,6 +1,27 @@
 body{
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
   font-size: 1rem;
+}
+nav{
+  background-color: #242424;
+  height: 40px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.nav-2{
+  background-color: white;
+  text-align: center;
+  margin: 30px;
+}
+.nav-2 a {
+  color: #444;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.active{
+  border-bottom: 3px solid orange;
 }
 img{
   width: 55%;
@@ -45,4 +66,7 @@ div{
 }
 .repo-lang-d{
   display: flex;
+}
+.orgs{
+  width: 40px;
 }
