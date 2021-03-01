@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <nav>
+
+    </nav>
+
+    <nav class="nav-2">
+      <a href="#">Overview</a>
+      <a href="#" class="active">Repositories</a>
+      <a href="#">Projects</a>
+      <a href="#">Packages</a>
+    </nav>
     <aside class="profile-container">
           <div class="profile-info"></div>
           <ul id="org-url"></ul>
@@ -29,7 +39,7 @@
     <script id="orgs" type="text/x-handlebars-template">
           {{#each organization}}
             <li>
-              <img src={{this.avatar_url}} alt="Organization"/>
+              <img class="orgs" src={{this.avatar_url}} alt="Organization"/>
             </li>
           {{/each}}
     </script>
