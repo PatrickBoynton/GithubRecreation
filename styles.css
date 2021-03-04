@@ -6,9 +6,17 @@ body{
 }
 nav{
   background-color: #242424;
+  color: #fff;
   height: 40px;
   margin: 0;
   margin-bottom: 5px;
+}
+.top-nav ul{
+  display: flex;
+}
+nav:input{
+  background-color: #242424;
+  color: #fff;
 }
 .nav-2{
   background-color: white;
@@ -22,6 +30,15 @@ nav{
 }
 .active{
   border-bottom: 3px solid orange;
+}
+.new{
+  background-color: green;
+  color: white;
+  width: 80px;
+  border: none;
+}
+.options{
+  text-align: center;
 }
 img{
   width: 55%;
