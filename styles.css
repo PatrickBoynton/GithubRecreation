@@ -11,8 +11,20 @@ nav{
   margin: 0;
   margin-bottom: 5px;
 }
+.top-nav{
+  display: flex;
+}
 .top-nav ul{
   display: flex;
+  margin-left: 10%;
+}
+.top-nav li {
+  padding-left: 50px;
+  text-align: center;
+}
+.top-nav input {
+  background-color: #242424;
+  color: white;
 }
 nav:input{
   background-color: #242424;
@@ -40,13 +52,19 @@ nav:input{
 .options{
   text-align: center;
 }
+.split {
+  display: flex;
+  margin-top: 100px;
+}
 img{
   width: 55%;
   border-radius: 100px;
   display: block;
   margin-bottom: 5px;
   text-align: center;
+  display: inline;
 }
+
 aside{
   width: 30%;
   height: 100%;

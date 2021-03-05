@@ -34,48 +34,49 @@
       </select>
       <button class="new">New</button>
     </section>
-    <aside class="profile-container">
-          <div class="profile-info"></div>
-          <ul id="org-url"></ul>
-    </aside>
+    <div class="split">
+      <aside class="profile-container">
+            <div class="profile-info"></div>
+            <ul id="org-url"></ul>
+      </aside>
 
-    <section class="repos"></section>
+      <section class="repos"></section>
+    </div>
+\
+      <script id="profile" type="text/x-handlebars-template">
 
-    <script id="profile" type="text/x-handlebars-template">
+          <img src={{this.avatar_url}} alt=""/>
+          <h2>{{this.login}}</h2>
+          <button>Edit Profile</button>
 
-        <img src={{this.avatar_url}} alt=""/>
-        <h2>{{this.login}}</h2>
-        <button>Edit Profile</button>
-
-        <h3>Organizations</h3>
+          <h3>Organizations</h3>
 
 
-    </script>
-
-    <script id="orgs" type="text/x-handlebars-template">
-          {{#each organization}}
+      </script>
+      <script id="orgs" type="text/x-handlebars-template">
+            {{#each organization}}
+              <li>
+                <img class="orgs" src={{this.avatar_url}} alt="Organization"/>
+              </li>
+            {{/each}}
+      </script>
+      <script id="repo" type="text/x-handlerbars-template">
+        <ul class="repo-list">
+          {{#each repos}}
+          <h2>
             <li>
-              <img class="orgs" src={{this.avatar_url}} alt="Organization"/>
+              <a href={{this.archive.url}}>{{this.name}}</a>
+              <div class="repo-lang-d">
+                <p>{{this.language}}</p>
+                <p>{{this.description}}</p>
+              </div>
+
             </li>
+          </h2>
           {{/each}}
-    </script>
+        </ul>
+      </script>
 
-    <script id="repo" type="text/x-handlerbars-template">
-      <ul class="repo-list">
-        {{#each repos}}
-        <h2>
-          <li>
-            <a href={{this.archive.url}}>{{this.name}}</a>
-            <div class="repo-lang-d">
-              <p>{{this.language}}</p>
-              <p>{{this.description}}</p>
-            </div>
-
-          </li>
-        </h2>
-        {{/each}}
-      </ul>
-    </script>
 
     <!-- <script src="/js/secrets.js" charset="utf-8"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
